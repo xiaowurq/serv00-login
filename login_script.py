@@ -127,7 +127,7 @@ async def send_telegram_message(message):
         'Content-Type': 'application/json'
     }
     try:
-        response = requests.get(url, json=payload, headers=headers)
+        response = requests.get(url, headers=headers)
         if response.status_code != 200:
             print(f"发送消息到wxpusher失败: {response.text}")
     except Exception as e:
